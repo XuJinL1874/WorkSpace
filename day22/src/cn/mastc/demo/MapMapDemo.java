@@ -1,12 +1,5 @@
 package cn.mastc.demo;
 
-/**
- * @Author: XuJin_L
- * @Description:
- * @Date: Created in 19:06 2018/8/6
- * @Modified By:
- */
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -127,4 +120,3 @@ public class MapMapDemo {
     }
 
 }
-
