@@ -12,6 +12,13 @@ import java.io.FileFilter;
  */
 public class MyFilter implements FileFilter {
     public boolean accept(File pathname){
-        return true;
+        /**
+         * pathname 接收到的也是文件的全路径
+         * c:\\abc\\a1.txt
+         * 对路径进行判断,如果是java文件,返回true,不是java文件,返回false
+         * 文件的的后缀结尾是.java
+         */
+        String name = pathname.getName();
+        return name.endsWith(".java");
     }
 }
