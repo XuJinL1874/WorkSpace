@@ -1,9 +1,6 @@
 package cn.mastc.demo2;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 
 /**
  * @Author: XuJin_L
@@ -26,10 +23,11 @@ import java.io.PrintWriter;
  * @Modified By:
  */
 public class PrintWriterDemo {
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws IOException, FileNotFoundException{
         function();
         function_1();
         function_2();
+        function_4();
     }
     /**
      * 打印流,向File对象的数据目的写入数据
@@ -62,6 +60,21 @@ public class PrintWriterDemo {
         PrintWriter pw = new PrintWriter(fos);
         pw.println("打印流");
         pw.flush();
+        pw.close();
+    }
+    /**
+     * 打印流,开启自动刷新功能
+     * 满足2个条件:
+     *      1. 输出的数据目的必须是流对象
+     *          OutputStream Writer
+     *      2. 必须调用println,printf,format三个方法中的一个,启用自动刷新
+     */
+    public  static void function_4() throws IOException {
+        FileOutputStream fos = new FileOutputStream("e:\\4.txt");
+        PrintWriter pw = new PrintWriter(fos, true);
+        pw.println("i");
+        pw.println("love");
+        pw.println("java");
         pw.close();
     }
 }
