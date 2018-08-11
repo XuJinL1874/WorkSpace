@@ -16,7 +16,8 @@ public class StringDemo1 {
 
         // 引用数据类型,比较对象地址 false
         System.out.println(str1 == str2);
-        // true
+        // (true) equals只比较两个字符串的内容是否相同，
+        // 只要比较的字符内容相同就返回true，否则返回false.equals
         System.out.println(str1.equals(str2));
     }
 }
