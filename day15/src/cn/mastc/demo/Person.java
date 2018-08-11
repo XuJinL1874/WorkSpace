@@ -17,6 +17,16 @@ public class Person {
     }
 
     /**
+     *  重写父类方法toString()
+     *  没有必要让调用者看到内存地址
+     *  要求: 方法中,返回类中所有成员变量的值
+     */
+    @Override
+    public String toString(){
+        return name + age;
+    }
+
+    /**
      * 将父类的方法equals重写过来,重写父类的方法
      * 但是,不改变父类方法的源代码,方法equals 比较两个对象的内存地址
      * @param obj
